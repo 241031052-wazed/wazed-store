@@ -1,0 +1,408 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>WAZED STORE | Fashion & Lifestyle</title>
+  <meta name="description" content="Discover stylish T-shirts, formal pants, jeans and casual wear at WAZED STORE.">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script src="https://unpkg.com/lucide@latest"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <!-- Announcement -->
+  <div class="announcement">
+    <p>NEW COLLECTION AVAILABLE — FREE DELIVERY ON ORDERS OVER ৳3,000</p>
+  </div>
+
+  <!-- Header -->
+  <header class="header">
+    <div class="container nav-container">
+
+      <a href="#" class="logo">
+        WAZED<span>STORE.</span>
+      </a>
+
+      <nav class="nav" id="nav">
+        <a href="#home">Home</a>
+        <a href="#collection">Collection</a>
+        <a href="#about">About</a>
+        <a href="#contact">Contact</a>
+      </nav>
+
+      <div class="nav-actions">
+
+        <button class="icon-btn" id="themeToggle" aria-label="Toggle theme">
+          <i data-lucide="moon"></i>
+        </button>
+
+        <button class="icon-btn search-btn" id="searchToggle" aria-label="Search">
+          <i data-lucide="search"></i>
+        </button>
+
+        <button class="icon-btn" id="wishlistOpen" aria-label="Wishlist">
+          <i data-lucide="heart"></i>
+          <span class="badge" id="wishlistCount">0</span>
+        </button>
+
+        <button class="icon-btn" id="cartOpen" aria-label="Cart">
+          <i data-lucide="shopping-bag"></i>
+          <span class="badge" id="cartCount">0</span>
+        </button>
+
+        <button class="icon-btn menu-btn" id="menuToggle" aria-label="Menu">
+          <i data-lucide="menu"></i>
+        </button>
+
+      </div>
+    </div>
+  </header>
+
+  <!-- Search Panel -->
+  <div class="search-panel" id="searchPanel">
+    <div class="container">
+      <input
+        type="text"
+        id="productSearch"
+        placeholder="Search T-shirts, jeans, formal pants..."
+      >
+    </div>
+  </div>
+
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" id="home">
+      <div class="hero-overlay"></div>
+
+      <div class="container hero-content">
+        <span class="eyebrow">WAZED STORE — NEW SEASON</span>
+
+        <h1>
+          STYLE THAT<br>
+          SPEAKS <span>FOR YOU.</span>
+        </h1>
+
+        <p>
+          Discover everyday fashion with modern styles,
+          comfortable fits and quality clothing.
+        </p>
+
+        <a href="#collection" class="btn btn-primary">
+          Explore Collection
+          <i data-lucide="arrow-up-right"></i>
+        </a>
+      </div>
+
+      <div class="hero-bottom">
+        <span>FASHION / STYLE / COMFORT</span>
+        <span>EST. 2026</span>
+      </div>
+    </section>
+
+    <!-- Categories -->
+    <section class="categories section-padding">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">FIND YOUR STYLE</span>
+            <h2>SHOP BY CATEGORY</h2>
+          </div>
+
+          <a href="#collection" class="text-link">
+            View all <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+
+        <div class="category-grid">
+
+          <a href="#collection" class="category-card" data-jump-category="tshirt">
+            <img src="https://images.unsplash.com/photo-1521572163474-6864f9cf17ab?auto=format&fit=crop&w=700&q=85" alt="Men's T-shirt">
+            <div class="category-info">
+              <h3>T-SHIRTS</h3>
+              <span>Explore Collection →</span>
+            </div>
+          </a>
+
+          <a href="#collection" class="category-card" data-jump-category="formal">
+            <img src="https://images.unsplash.com/photo-1473966968600-fa801b869a1a?auto=format&fit=crop&w=700&q=85" alt="Formal trousers">
+            <div class="category-info">
+              <h3>FORMAL PANTS</h3>
+              <span>Explore Collection →</span>
+            </div>
+          </a>
+
+          <a href="#collection" class="category-card" data-jump-category="jeans">
+            <img src="https://images.unsplash.com/photo-1542272604-787c3835535d?auto=format&fit=crop&w=700&q=85" alt="Denim jeans">
+            <div class="category-info">
+              <h3>JEANS PANTS</h3>
+              <span>Explore Collection →</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- Collection -->
+    <section class="collection section-padding" id="collection">
+      <div class="container">
+
+        <div class="section-heading">
+          <div>
+            <span class="eyebrow">OUR COLLECTION</span>
+            <h2>FIND YOUR LOOK.</h2>
+            <p class="section-subtitle">
+              Everyday essentials. Modern designs. Comfortable fashion.
+            </p>
+          </div>
+        </div>
+
+        <div class="shop-toolbar">
+
+          <div class="filter-tabs" id="categoryTabs">
+            <button class="filter-btn active" data-category="all">All Items</button>
+            <button class="filter-btn" data-category="tshirt">T-Shirts</button>
+            <button class="filter-btn" data-category="formal">Formal Pants</button>
+            <button class="filter-btn" data-category="jeans">Jeans</button>
+            <button class="filter-btn" data-category="casual">Casual Wear</button>
+          </div>
+
+          <select id="sortSelect" aria-label="Sort products">
+            <option value="featured">Featured</option>
+            <option value="low">Price: Low to High</option>
+            <option value="high">Price: High to Low</option>
+            <option value="rating">Top Rated</option>
+          </select>
+
+        </div>
+
+        <div class="product-count">
+          <span id="resultCount">Showing all products</span>
+          <button id="clearFilters">Clear Filters</button>
+        </div>
+
+        <div class="product-grid" id="productGrid"></div>
+
+        <div class="empty-state" id="emptyState">
+          <i data-lucide="package-search"></i>
+          <h3>No products found</h3>
+          <p>Try searching with a different name or category.</p>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="about section-padding" id="about">
+      <div class="container about-grid">
+
+        <div class="about-image">
+          <img
+            src="https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?auto=format&fit=crop&w=1000&q=85"
+            alt="Modern fashion collection"
+          >
+        </div>
+
+        <div class="about-content">
+          <span class="eyebrow">ABOUT WAZED STORE</span>
+
+          <h2>EVERYDAY FASHION.<br><span>BETTER STYLE.</span></h2>
+
+          <p>
+            WAZED STORE brings together modern clothing styles
+            for everyday life. From comfortable T-shirts to
+            stylish jeans and formal pants, our collection
+            focuses on simplicity, comfort and personal style.
+          </p>
+
+          <p>
+            Our goal is to make exploring fashion simple,
+            enjoyable and convenient for everyone.
+          </p>
+
+          <a href="#collection" class="btn btn-primary">
+            Discover More
+            <i data-lucide="arrow-up-right"></i>
+          </a>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- Benefits -->
+    <section class="benefits section-padding">
+      <div class="container benefit-grid">
+
+        <div class="benefit-card">
+          <i data-lucide="truck"></i>
+          <h3>DELIVERY</h3>
+          <p>Convenient delivery across Bangladesh.</p>
+        </div>
+
+        <div class="benefit-card">
+          <i data-lucide="shield-check"></i>
+          <h3>QUALITY</h3>
+          <p>Comfortable styles for everyday use.</p>
+        </div>
+
+        <div class="benefit-card">
+          <i data-lucide="refresh-cw"></i>
+          <h3>EASY SUPPORT</h3>
+          <p>Customer assistance for your shopping needs.</p>
+        </div>
+
+        <div class="benefit-card">
+          <i data-lucide="heart"></i>
+          <h3>YOUR STYLE</h3>
+          <p>Explore clothing that matches your taste.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="footer" id="contact">
+    <div class="container">
+
+      <div class="footer-main">
+
+        <div class="footer-brand">
+          <a href="#" class="logo">WAZED<span>STORE.</span></a>
+
+          <p>
+            Modern everyday fashion.
+            Find your style with WAZED STORE.
+          </p>
+<div class="social-links">
+
+  <a href="https://www.facebook.com/share/1MPRLXh8Aa/?mibextid=wwXIfr"
+     target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M13.5 21v-8.2h2.8l.4-3.2h-3.2V7.5c0-.9.3-1.6 1.6-1.6h1.7V3.1c-.3 0-1.3-.1-2.5-.1-2.5 0-4.2 1.5-4.2 4.3v2.3H7.3v3.2h2.8V21h3.4z"/>
+    </svg>
+  </a>
+
+  <a href="https://www.instagram.com/" target="_blank"
+     rel="noopener noreferrer" aria-label="Instagram">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="1.8">
+      <rect x="3" y="3" width="18" height="18" rx="5"/>
+      <circle cx="12" cy="12" r="4"/>
+      <circle cx="18" cy="6" r="1" fill="currentColor"/>
+    </svg>
+  </a>
+
+  <a href="https://www.linkedin.com/" target="_blank"
+     rel="noopener noreferrer" aria-label="LinkedIn">
+    <svg viewBox="0 0 24 24" fill="currentColor">
+      <path d="M5.2 3a2.2 2.2 0 1 0 0 4.4 2.2 2.2 0 0 0 0-4.4zM3.3 9h3.8v12H3.3zM9.5 9h3.6v1.6h.1A4 4 0 0 1 16.8 8c3.9 0 4.6 2.5 4.6 5.7V21h-3.8v-6.5c0-1.6 0-3.6-2.2-3.6s-2.5 1.7-2.5 3.5V21H9.5z"/>
+    </svg>
+  </a>
+
+  <a href="https://wa.me/8801879999567" target="_blank"
+     rel="noopener noreferrer" aria-label="WhatsApp">
+    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor"
+         stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M21 11.5a8.4 8.4 0 0 1-12.4 7.4L3 20l1.2-5.4A8.4 8.4 0 1 1 21 11.5Z"/>
+      <path d="M9 9c.4 2 2 3.6 4 4l1-1 2 1c-.2 1.3-1.2 2-2.5 1.8-3.2-.5-5.8-3.1-6.3-6.3C7 7.2 7.7 6.2 9 6l1 2-1 1Z"/>
+    </svg>
+  </a>
+
+</div>
+          
+        </div>
+
+        <div class="footer-links">
+          <h4>SHOP</h4>
+          <a href="#collection">All Products</a>
+          <a href="#collection">T-Shirts</a>
+          <a href="#collection">Formal Pants</a>
+          <a href="#collection">Jeans Pants</a>
+        </div>
+
+        <div class="footer-links">
+          <h4>INFORMATION</h4>
+          <a href="#about">About Us</a>
+          <a href="#contact">Contact</a>
+          <a href="#collection">Our Collection</a>
+        </div>
+
+      </div>
+
+      <div class="footer-bottom">
+        <p>© 2026 WAZED STORE. ALL RIGHTS RESERVED.</p>
+        <a href="#home">BACK TO TOP ↑</a>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Overlay -->
+  <div class="overlay" id="overlay"></div>
+
+  <!-- Cart Drawer -->
+  <aside class="drawer" id="cartDrawer">
+
+    <div class="drawer-header">
+      <h2>YOUR CART</h2>
+      <button class="close-btn" data-close>
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body" id="cartItems"></div>
+
+    <div class="drawer-footer">
+      <div class="total-row">
+        <span>Subtotal</span>
+        <strong id="cartTotal">৳0</strong>
+      </div>
+
+      <button class="btn btn-primary full-btn" id="checkoutBtn">
+        Continue Shopping
+      </button>
+    </div>
+
+  </aside>
+
+  <!-- Wishlist Drawer -->
+  <aside class="drawer" id="wishlistDrawer">
+
+    <div class="drawer-header">
+      <h2>MY WISHLIST</h2>
+      <button class="close-btn" data-close>
+        <i data-lucide="x"></i>
+      </button>
+    </div>
+
+    <div class="drawer-body" id="wishlistItems"></div>
+
+  </aside>
+
+  <!-- Quick View Modal -->
+  <div class="modal" id="quickModal">
+    <button class="modal-close" id="modalClose">
+      <i data-lucide="x"></i>
+    </button>
+    <div id="quickContent"></div>
+  </div>
+
+  <!-- Toast -->
+  <div class="toast" id="toast"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
